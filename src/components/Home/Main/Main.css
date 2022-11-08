@@ -1,0 +1,19 @@
+.main-content {
+   padding: 150px 0;
+}
+.main-heading{
+   font-size: 50px;
+   padding: 0 50px;
+   margin-bottom: 15px;
+   color: #3A4256;
+}
+.main-para{
+   padding: 0 50px;
+   margin-bottom: 25px;
+   color: rgb(173, 152, 152);
+}
+.main-btn{
+   margin-left: 50px;
+   width: 180px;
+   height: 40px;
+}

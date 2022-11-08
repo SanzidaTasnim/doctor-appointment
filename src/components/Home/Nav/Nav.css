@@ -1,0 +1,22 @@
+.nav-item {
+   margin: 0 40px;
+   position: relative;
+   transition: all linear 2s;
+}
+.nav-item::before {
+    content: " ";
+    position: absolute;
+    top: 80%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: grey;
+    transition: all linear 0.5s;
+}
+.nav-item:hover::before {
+   width: 100%;
+}
+.nav-link{
+   font-size: 18px;
+
+}

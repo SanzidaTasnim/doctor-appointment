@@ -1,0 +1,17 @@
+.header-bg{
+   background-image: url(../../../images/bg.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+}
+.header-bg::before {
+   position: absolute;
+   content: "";
+   width: 31%;
+   top: 0;
+   right: 0;
+   height: 100%;
+   background-color: #3A4256;
+   z-index: -1;
+}
