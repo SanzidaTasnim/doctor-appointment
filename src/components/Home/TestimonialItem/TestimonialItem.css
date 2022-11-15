@@ -1,0 +1,28 @@
+.test-describe p {
+   font-family: 'Open Sans',sans-serif;
+   color: #8b9984;
+   padding-right: 15px;
+   text-align: justify;
+   line-height: 28px;
+   padding-bottom: 25px;
+   margin-top: 23px;
+}
+.test-bottom h5{
+   color: rgb(28, 199, 193);
+   font-family:'Open Sans',sans-serif;
+   margin-top: -5px;
+}
+.test-describe{
+   border-radius: 5px;
+   box-shadow: 5px 5px 20px lightgrey;
+}
+.test-describe small {
+   font-family: 'Open Sans',sans-serif;
+   color: #8b9984;
+   display: inline-block;
+   padding-right: 15px;
+   text-align: justify;
+   line-height: 28px;
+   padding-bottom: 35px;
+   margin-top: -5px;
+}

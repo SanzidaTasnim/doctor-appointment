@@ -1,0 +1,9 @@
+.doctor-item h4{
+   margin-top: 20px;
+   margin-bottom: 10px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 700;
+}
+.doctor-item small{
+   color: grey;
+}

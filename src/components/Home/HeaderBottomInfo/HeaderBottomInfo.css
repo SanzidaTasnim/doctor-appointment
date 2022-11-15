@@ -1,0 +1,16 @@
+.main{
+   width: 32%;
+   text-align: center;
+   color: #fff;
+   padding: 20px;
+   border-radius: 5px;
+}
+.icon {
+   font-size: 40px;
+}
+.bg-sky{
+   background-color: #1CC7C1;
+}
+.bg-navy{
+   background-color: #3A4256;
+}

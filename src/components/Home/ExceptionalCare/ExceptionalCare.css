@@ -1,0 +1,27 @@
+.care-right{
+   margin-left: 20px;
+   margin-top: 90px
+}
+.care-right h2{
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 600;
+   padding-right: 207px;
+   font-size: 40px;
+   margin-bottom: 40px;
+   line-height: 47px;
+   color: #3A4256;
+}
+.care-right p {
+   font-family: 'Open Sans', sans-serif;
+   color:#8b9984;
+   padding-right: 190px;
+   line-height: 32px;
+   margin-bottom: 40px;
+}
+.care-right button{
+   width: 130px;
+   font-family: 'Open Sans', sans-serif;
+}
+.care-left img{
+   height: 600px;
+}

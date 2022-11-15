@@ -1,0 +1,13 @@
+font-family: 'Open Sans', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+
+
+p {
+   color: #8b9984;
+}
+font-color {
+   color: rgb(28, 199, 193);
+}
+text-color{
+   color: #8b9984;
+}

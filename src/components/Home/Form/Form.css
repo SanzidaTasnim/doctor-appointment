@@ -1,0 +1,34 @@
+.form-main{
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   background-image: url(./../../../images/appointment-bg.png);
+   position: relative;
+}
+.form-main::before {
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: #3A4256;
+   opacity: 0.9;
+}
+.form-main h5{
+   padding-top: 70px;
+   color: rgb(28, 199, 193);
+   font-weight: 700;
+   font-family: 'Open Sans', sans-serif;
+}
+.form-main h2{
+   font-family: 'Open Sans', sans-serif;
+   padding-bottom: 30px;
+   color: #fff;
+}
+.input-submit{
+   margin-bottom: 90px;
+   width: 200px;
+}
+.form-sub{
+   position: relative;
+}
