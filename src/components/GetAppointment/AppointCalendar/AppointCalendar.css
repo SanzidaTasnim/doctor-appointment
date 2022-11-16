@@ -1,0 +1,28 @@
+.calendar-container{
+   width: 415px;
+   margin: auto;
+}
+.react-calendar{
+   background-color: #fff;
+   border: 0;
+   margin-top: 50px;
+   width: 430px;
+   font-family: 'Open Sans', sans-serif;
+}
+.react-calendar__navigation {
+   padding: 40px 0;
+}
+.react-calendar__tile--active{
+   color: blue;
+   font-weight: 700;
+}
+.react-calendar__viewContainer {
+   padding-bottom: 20px;
+}
+.react-calendar__month-view__weekdays__weekday {
+   color: grey;
+}
+span.react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
+   color: grey;
+   font-size: 19px;
+}

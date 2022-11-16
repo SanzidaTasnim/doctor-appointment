@@ -1,0 +1,34 @@
+.available-main {
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 100px;
+}
+.available-main h2{
+   color: rgb(28, 199, 193);
+   padding-top: 100px;
+   padding-bottom: 80px;
+   font-size: 30px;
+}
+.available-main h4{
+   color: rgb(28, 199, 193);
+}
+.available-main h5{
+   font-weight: 700;
+   font-size: 17px;
+}
+.available-main small{
+   color: grey;
+   font-size: 12px;
+}
+.available-main button{
+   margin-top: 15px;
+   background-color: #1CC7C1;
+   border: 0;
+}
+.available-item{
+   box-shadow: 5px 5px 30px lightgrey;
+   width: 360px;
+   padding: 20px;
+}
+.avail-margin{
+   margin-top: 30px;
+}

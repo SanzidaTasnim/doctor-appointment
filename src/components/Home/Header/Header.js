@@ -1,12 +1,12 @@
 import React from 'react';
 import Main from '../Main/Main';
-import Nav from '../Nav/Nav';
+import Nav from '../../Shared/Nav/Nav';
 import './Header.css';
 
 const Header = () => {
    return (
       <div className='header-bg'>
-         <Nav />
+         <Nav textLight={true} />
          <Main />
       </div>
    );
