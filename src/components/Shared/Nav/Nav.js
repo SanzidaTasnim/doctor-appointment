@@ -19,14 +19,14 @@ const Nav = ({textLight}) => {
                      <Link className="nav-link" to="">Dental Services</Link>
                   </li>
                   <li className="nav-item">
-                     <Link className={`nav-link ${navColor}`} to="">Reviews</Link>
-                  </li>
-                  <li className="nav-item">
                      <Link className={`nav-link ${navColor}`} to="">Blog</Link>
                   </li>
                   <li className="nav-item">
                      <Link className={`nav-link ${navColor}`} to="">Contact Us</Link>
                   </li>  
+                  <li className="nav-item">
+                     <Link className={`nav-link ${navColor}`} to="">Dashboard</Link>
+                  </li> 
                </ul>
             </div>
          </nav>
