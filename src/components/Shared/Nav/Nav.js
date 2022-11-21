@@ -25,7 +25,7 @@ const Nav = ({textLight}) => {
                      <Link className={`nav-link ${navColor}`} to="">Contact Us</Link>
                   </li>  
                   <li className="nav-item">
-                     <Link className={`nav-link ${navColor}`} to="">Dashboard</Link>
+                     <Link className={`nav-link ${navColor}`} to="/dashboard">Dashboard</Link>
                   </li> 
                </ul>
             </div>

@@ -30,12 +30,14 @@
    box-shadow: none;
 }
 .login-form .form-group,
-.login-form button{
+.login-form .sign-in,
+.login-form .google-button{
    margin-left: 60px;
 }
 .login-form .sign-in{
    margin-top: 40px;
    width: 400px;
+   border-radius: 5px;
 }
 .google-button{
    margin-top: 10px;
