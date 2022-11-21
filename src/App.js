@@ -7,6 +7,8 @@ import LogIn from "./components/LogIn/LogIn";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { createContext, useState} from 'react';
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Services from "./components/Services/Services";
+import About from "./components/About/About";
 
 export const createUser = createContext();
 
@@ -19,8 +21,10 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path='/appointment' element={<GetAppointment />} />
         <Route path='/login' element={<LogIn />} />
-        <Route path='/*' element={<PrivateRoute />}>
+        <Route path='/about' element={<About />} />
+        <Route path='/' element={<PrivateRoute />}>
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="services" element={<Services />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

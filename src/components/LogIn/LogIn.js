@@ -5,14 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import {useLocation , useNavigate} from 'react-router';
 import "./LogIn.css";
-import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
-import { app } from "../../firebase.config";
 import { createUser } from "../../App";
+import { googleSignIn, signInWithEmailPass } from "./LoginManager";
 
 library.add(faGoogle);
 
@@ -21,7 +15,6 @@ const LogIn = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const provider = new GoogleAuthProvider(app);
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -46,49 +39,26 @@ const LogIn = () => {
     }
   };
 
-  const googleSignIn = (e) => {
-    const auth = getAuth(app);
-    signInWithPopup(auth, provider)
-      .then((userCredential) => {
-        const user = userCredential.user;
-          const copyUser = { ...user };
-          copyUser.success = true;
-          copyUser.error = "";
-          setLoggedInUser(copyUser);
-          setUser(copyUser);
-          location.state?.from && navigate(location.state.from);
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-          const copyUser = { ...user };
-          copyUser.error = errorMessage;
-          copyUser.success = false;
-          setUser(copyUser);
-      });
+  const dataResolved = (res) => {
+    setUser(res);
+    setLoggedInUser(res);
+    location.state?.from && navigate(location.state.from);
+  }
+
+  const handleGoogleSignIn = (e) => {
+    googleSignIn()
+    .then(res => {
+      dataResolved(res) 
+    })
     e.preventDefault();
-  };
+  }
 
-
-  const signInWithEmailPass = (e) => {
+  const handleSignInWithEmailPass = (e) => {
     if (user.email && user.password) {
-      const auth = getAuth(app);
-      createUserWithEmailAndPassword(auth, user.email, user.password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          const copyUser = { ...user };
-          copyUser.success = true;
-          copyUser.error = "";
-          setLoggedInUser(copyUser);
-          setUser(copyUser);
-          location.state?.from && navigate(location.state.from);
-        })
-        .catch((error) => {
-          const errorMessage = error.message;
-          const copyUser = { ...user };
-          copyUser.error = errorMessage;
-          copyUser.success = false;
-          setUser(copyUser);
-        });
+      signInWithEmailPass(user.email, user.password)
+      .then(res => {
+        dataResolved(res);
+      })
     }
     e.preventDefault();
   };
@@ -97,7 +67,7 @@ const LogIn = () => {
     <div className="row container m-auto">
       <div className="col-md-5 login-form">
         <h2>Login</h2>
-        <form action="#" method="POST" onSubmit={signInWithEmailPass}>
+        <form action="#" method="POST" onSubmit={handleSignInWithEmailPass}>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email Address</label>
             <input
@@ -129,7 +99,7 @@ const LogIn = () => {
         <button
           type="submit"
           className="btn btn-primary google-button"
-          onClick={googleSignIn}
+          onClick={handleGoogleSignIn}
         >
           <FontAwesomeIcon icon={faGoogle} />
           <span className="google-text">Google Sign In</span>

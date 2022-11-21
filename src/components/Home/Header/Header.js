@@ -6,7 +6,7 @@ import './Header.css';
 const Header = () => {
    return (
       <div className='header-bg'>
-         <Nav textLight={true} />
+         <Nav textLight={true}/>
          <Main />
       </div>
    );
