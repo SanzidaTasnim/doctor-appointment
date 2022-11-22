@@ -1,14 +1,14 @@
+import { createContext, useState } from 'react';
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home/Home/Home";
-import { Routes, Route } from "react-router-dom";
-import NotFound from "./components/NotFound/NotFound";
-import GetAppointment from "./components/GetAppointment/GetAppointment/GetAppointment";
-import LogIn from "./components/LogIn/LogIn";
-import Dashboard from "./components/Dashboard/Dashboard";
-import { createContext, useState} from 'react';
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Services from "./components/Services/Services";
 import About from "./components/About/About";
+import Dashboard from "./components/Dashboard/Dashboard";
+import GetAppointment from "./components/GetAppointment/GetAppointment/GetAppointment";
+import Home from "./components/Home/Home/Home";
+import LogIn from "./components/LogIn/LogIn";
+import NotFound from "./components/NotFound/NotFound";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Services from "./components/Service/Service";
 
 export const createUser = createContext();
 
